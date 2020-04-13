@@ -1,0 +1,78 @@
+{
+	"info": {
+		"_postman_id": "4283b47d-b038-4f2a-b73c-78cdcb13e247",
+		"name": "Interview",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addNewAccount",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Ketan\",\n\t\"accountId\":\"456789\",\n\t\"accountType\": \"Current\",\n\t\"balance\": \"600\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"register"
+					]
+				},
+				"description": "{\n\t\"name\":\"Mayank\",\n\t\"accountId\":\"123456\",\n\t\"accountType\": \"Saving\",\n\t\"balance\": \"500\"\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer Amount",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fromAccountId\":\"9854789\",\n\t\"toAccountId\":\"85997\",\n\t\"amount\": \"50000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/transfer",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"transfer"
+					]
+				},
+				"description": "{\n\t\"fromAccountId\":\"9854789\",\n\t\"toAccountId\":\"85997\",\n\t\"amount\": \"50000\"\n}"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
