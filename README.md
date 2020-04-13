@@ -1,15 +1,15 @@
-GiveIndia Coding Test
-Pre Requested
+## GiveIndia Coding Test
+
+### Pre Requested
 1) Node.js 
 2) MongoDB
 
 Need to Set MongoDB URI in .env file ( Default is mongodb://localhost:27017/giveindia)
 
-Object Schema
-name: String (required)
-value: Any (required)
-timestamp: Date (not required)
-How to use the API
+### How to use the API
+
+#### Using Curl Command
+
 1) Create new Account
 curl --location --request POST 'localhost:3000/register' \
 --header 'Content-Type: application/json' \
@@ -32,15 +32,16 @@ curl --location --request POST 'localhost:3000/transfer' \
 	"amount": "50000"
 }'
 
-Setting Up (If needed)
+#### Using PostMan Collection
+You need to import postman collection from git repository (Interview.postman_collection.json)
+
+## Now Install Node Modules and Run Application
 npm install
 npm run watch
-node .\seeder.js  (For Auto register some accounts)
+node .\seeder.js  ####(For Auto register some accounts)
 
 
-Running Tests
+### Running Tests
 
-npm install -g mocha
-
-cd > Project Dir
+npm install -g mocha #### require to install mocha lib for running Test Cases
 > mocha
