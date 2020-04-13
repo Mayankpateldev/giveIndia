@@ -10,38 +10,35 @@ Need to Set MongoDB URI in .env file ( Default is mongodb://localhost:27017/give
 
 #### Using Curl Command
 
-1) Create new Account
-curl --location --request POST 'localhost:3000/register' \
---header 'Content-Type: application/json' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "name": "Testing",
-    "accountId": "8283422",
-    "accountType": "Savings",
-    "balance": "35000"
-}'
+##### Register new Account:
+	curl --location --request POST 'localhost:3000/register' \
+	--header 'Content-Type: application/json' \
+	--header 'Content-Type: application/json' \
+	--data-raw '{
+	    "name": "Testing",
+	    "accountId": "8283422",
+	    "accountType": "Savings",
+	    "balance": "35000"
+	}'
 
-2) Transfer Amount to One Account to Other
-
-curl --location --request POST 'localhost:3000/transfer' \
---header 'Content-Type: application/json' \
---header 'Content-Type: application/json' \
---data-raw '{
-	"fromAccountId":"9854789",
-	"toAccountId":"85997",
-	"amount": "50000"
-}'
+##### Transfer Amount from one Account to Other:
+	curl --location --request POST 'localhost:3000/transfer' \
+	--header 'Content-Type: application/json' \
+	--header 'Content-Type: application/json' \
+	--data-raw '{
+		"fromAccountId":"9854789",
+		"toAccountId":"85997",
+		"amount": "50000"
+	}'
 
 #### Using PostMan Collection
 You need to import postman collection from git repository (Interview.postman_collection.json)
 
-## Now Install Node Modules and Run Application
-npm install
-npm run watch
-node .\seeder.js  ####(For Auto register some accounts)
-
-
+### Now Install Node Modules and Run Application
+	npm install
+	npm run watch
+### If you want to register dummy account using seeder please run below commands ( Must be server run)
+	node .\seeder.js  ####(For Auto register some accounts)
 ### Running Tests
-
-npm install -g mocha #### require to install mocha lib for running Test Cases
-> mocha
+	npm install -g mocha #### require to install mocha lib for running Test Cases
+	> mocha
