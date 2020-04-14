@@ -8,9 +8,9 @@ const serverURL = process.env.SERVER_URL || 'http://127.0.0.1:3000';
 
 describe('GiveIndiaTest', function () {
 
-    it("should register new account /register POST", function (done) {
+    it("should register new account /account/register POST", function (done) {
         chai.request(serverURL)
-            .post('/register')
+            .post('/account/register')
             .send({
                 "name": "Test Account 1",
                 "accountId": "8283422",
@@ -25,9 +25,9 @@ describe('GiveIndiaTest', function () {
             });
     })
 
-    it("should register new account /register POST", function (done) {
+    it("should register new account /account/register POST", function (done) {
         chai.request(serverURL)
-            .post('/register')
+            .post('/account/register')
             .send({
                 "name": "Test Account 2",
                 "accountId": "123586",
@@ -42,9 +42,9 @@ describe('GiveIndiaTest', function () {
             });
     })
 
-    it("can not register account with same id /register POST", function (done) {
+    it("can not register account with same id /account/register POST", function (done) {
         chai.request(serverURL)
-            .post('/register')
+            .post('/account/register')
             .send({
                 "name": "Anil",
                 "accountId": "8283422",
@@ -61,9 +61,9 @@ describe('GiveIndiaTest', function () {
             });
     })
 
-    it("can not register without account id /register POST", function (done) {
+    it("can not register without account id /account/register POST", function (done) {
         chai.request(serverURL)
-            .post('/register')
+            .post('/account/register')
             .send({
                 "name": "Anil",
                 "accountType": "Savings",
@@ -78,9 +78,9 @@ describe('GiveIndiaTest', function () {
             });
     })
 
-    it("should transfer from one account to other /transfer POST", function (done) {
+    it("should transfer from one account to other /account/transfer POST", function (done) {
         chai.request(serverURL)
-            .post('/transfer')
+            .post('/account/transfer')
             .send({
                 "fromAccountId":"8283422",
                 "toAccountId":"123586",
@@ -96,9 +96,9 @@ describe('GiveIndiaTest', function () {
             });
     })
 
-    it("Can not transfer in same account /transfer POST", function (done) {
+    it("Can not transfer in same account /account/transfer POST", function (done) {
         chai.request(serverURL)
-            .post('/transfer')
+            .post('/account/transfer')
             .send({
                 "fromAccountId":"8283422",
                 "toAccountId":"8283422",
@@ -114,9 +114,9 @@ describe('GiveIndiaTest', function () {
             });
     })
 
-    it("can not transfer `Source account should have the required amount for the transaction to succeed` /transfer POST", function (done) {
+    it("can not transfer `Source account should have the required amount for the transaction to succeed` /account/transfer POST", function (done) {
         chai.request(serverURL)
-            .post('/transfer')
+            .post('/account/transfer')
             .send({
                 "fromAccountId":"8283422",
                 "toAccountId":"123586",
@@ -132,9 +132,9 @@ describe('GiveIndiaTest', function () {
             });
     })
 
-    it("should register new account /register POST", function (done) {
+    it("should register new account /account/register POST", function (done) {
         chai.request(serverURL)
-            .post('/register')
+            .post('/account/register')
             .send({
                 "name": "Test Account 3",
                 "accountId": "689526000",
@@ -149,9 +149,9 @@ describe('GiveIndiaTest', function () {
             });
     })
     
-    it("should transfer from one account to other /transfer POST", function (done) {
+    it("should transfer from one account to other /account/transfer POST", function (done) {
         chai.request(serverURL)
-            .post('/transfer')
+            .post('/account/transfer')
             .send({
                 "fromAccountId":"8283422",
                 "toAccountId":"689526000",
@@ -167,9 +167,9 @@ describe('GiveIndiaTest', function () {
             });
     })
     
-    it("can not transfer `The balance in ‘BasicSavings’ account type should never exceed Rs. 50,000` /transfer POST", function (done) {
+    it("can not transfer `The balance in ‘BasicSavings’ account type should never exceed Rs. 50,000` /account/transfer POST", function (done) {
         chai.request(serverURL)
-            .post('/transfer')
+            .post('/account/transfer')
             .send({
                 "fromAccountId":"8283422",
                 "toAccountId":"689526000",

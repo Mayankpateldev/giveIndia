@@ -1,7 +1,7 @@
 var request = require('request');
 var options = {
   'method': 'POST',
-  'url': 'http://localhost:3000/register',
+  'url': 'http://localhost:3000/account/register',
   'headers': {
     'Content-Type': ['application/json', 'application/json']
   },
@@ -15,7 +15,7 @@ request(options, function (error, response) {
 
 var options = {
     'method': 'POST',
-    'url': 'http://localhost:3000/register',
+    'url': 'http://localhost:3000/account/register',
     'headers': {
       'Content-Type': ['application/json', 'application/json']
     },
@@ -30,7 +30,7 @@ request(options, function (error, response) {
 
 var options = {
   'method': 'POST',
-  'url': 'http://localhost:3000/register',
+  'url': 'http://localhost:3000/account/register',
   'headers': {
     'Content-Type': ['application/json', 'application/json']
   },
@@ -44,7 +44,7 @@ request(options, function (error, response) {
 
 var options = {
     'method': 'POST',
-    'url': 'http://localhost:3000/register',
+    'url': 'http://localhost:3000/account/register',
     'headers': {
       'Content-Type': ['application/json', 'application/json']
     },
@@ -58,7 +58,7 @@ request(options, function (error, response) {
 
 var options = {
     'method': 'POST',
-    'url': 'http://localhost:3000/register',
+    'url': 'http://localhost:3000/account/register',
     'headers': {
       'Content-Type': ['application/json', 'application/json']
     },
@@ -73,7 +73,7 @@ request(options, function (error, response) {
 
 var options = {
   'method': 'POST',
-  'url': 'http://localhost:3000/register',
+  'url': 'http://localhost:3000/account/register',
   'headers': {
     'Content-Type': ['application/json', 'application/json']
   },
@@ -87,7 +87,7 @@ request(options, function (error, response) {
 
 var options = {
     'method': 'POST',
-    'url': 'http://localhost:3000/register',
+    'url': 'http://localhost:3000/account/register',
     'headers': {
       'Content-Type': ['application/json', 'application/json']
     },
@@ -100,7 +100,7 @@ request(options, function (error, response) {
 
 var options = {
     'method': 'POST',
-    'url': 'http://localhost:3000/register',
+    'url': 'http://localhost:3000/account/register',
     'headers': {
       'Content-Type': ['application/json', 'application/json']
     },
@@ -115,7 +115,7 @@ request(options, function (error, response) {
 
 var options = {
   'method': 'POST',
-  'url': 'http://localhost:3000/register',
+  'url': 'http://localhost:3000/account/register',
   'headers': {
     'Content-Type': ['application/json', 'application/json']
   },

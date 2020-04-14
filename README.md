@@ -11,7 +11,7 @@ Need to Set MongoDB URI in .env file ( Default is mongodb://localhost:27017/give
 #### Using Curl Command
 
 ##### Register new Account:
-	curl --location --request POST 'localhost:3000/register' \
+	curl --location --request POST 'localhost:3000/account/register' \
 	--header 'Content-Type: application/json' \
 	--header 'Content-Type: application/json' \
 	--data-raw '{
@@ -22,7 +22,7 @@ Need to Set MongoDB URI in .env file ( Default is mongodb://localhost:27017/give
 	}'
 
 ##### Transfer Amount from one Account to Other:
-	curl --location --request POST 'localhost:3000/transfer' \
+	curl --location --request POST 'localhost:3000/account/transfer' \
 	--header 'Content-Type: application/json' \
 	--header 'Content-Type: application/json' \
 	--data-raw '{
